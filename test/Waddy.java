@@ -146,19 +146,19 @@ return total;
 public static long time_insert(long end,long start) {
 	
 	long elapsed= end-start;
-	return elapsed/1000000;
+	return elapsed/1000;
 }
 public static long time_min(long endmin,long startmin) {
 	long elapsedmin= endmin-startmin;
-	return elapsedmin/1000000;
+	return elapsedmin/1000;
 }
 public static long time_max(long endmax, long startmax) {
 	long elapsedmax= endmax-startmax;
-	return elapsedmax/1000000;
+	return elapsedmax/1000;
 }
  static long time_median(long endmedian, long startmedian) {
 	long elapsedmedian= endmedian-startmedian;
-	return elapsedmedian/1000000;
+	return elapsedmedian/1000;
 }
 }
 
