@@ -21,19 +21,11 @@ public class Waddy {
 			LinkedList<Integer> a= new LinkedList<Integer>();
 			long start= System.currentTimeMillis();
 			while(read2.hasNext()) {
-				
-					
-					a.add(read2.nextInt());
-				
-			       ArrayList<Integer> b= new ArrayList<Integer>(a);
-			       
-			   
-			    	Collections.sort(b);
-			    
-			    	 
-			   Object[]c= b.toArray();
-			    	
-			    	  List<Object> aL = Arrays.asList(c);
+			a.add(read2.nextInt());
+			ArrayList<Integer> b= new ArrayList<Integer>(a);
+			Collections.sort(b);
+			Object[]c= b.toArray();
+			List<Object> aL = Arrays.asList(c);
 			    
 			    			  
 
@@ -43,114 +35,63 @@ System.out.println("ArrayList: " + aL);
 // convert the ArrayList to LinkedList 
 List<Object> 
 lL = convertALtoLL(aL); 
-
-
 long end= System.nanoTime();
-
 long startmin=System.nanoTime();
 min(c);
 long endmin=System.nanoTime();
-
 long startmax=System.nanoTime();
 max(c);
 long endmax=System.nanoTime();
-
 long startmedian=System.nanoTime();
 median(c);
 long endmedian=System.nanoTime();
-
-
 System.out.println(time_insert(end, start));
 System.out.println(time_min(endmin, startmin));
 System.out.println(time_max(endmax, startmax));
 System.out.println(time_median(endmedian, startmedian));
-
-
 // Print the LinkedList 
 System.out.println("LinkedList: " + lL); 
-					
-				
-				
-			}
-			
-			
-			
+}
 			read2.close();
-			
-			
-			}	
-
-			
-
-
-			
-			if(x==1) {File file1 = new File("/Users/abenezerfetsum/eclipse-workspace/test/src/test/input1.txt");	
-			Scanner read1= new Scanner(file1);
+}	
+if(x==1) {File file1 = new File("/Users/abenezerfetsum/eclipse-workspace/test/src/test/input1.txt");	
+Scanner read1= new Scanner(file1);
 LinkedList<Integer> a= new LinkedList<Integer>();
 long start= System.currentTimeMillis();
 while(read1.hasNext()) {
+			a.add(read1.nextInt());
+			ArrayList<Integer> b= new ArrayList<Integer>(a);
+			Collections.sort(b);
+			Object[]c= b.toArray();
+			List<Object> aL = Arrays.asList(c);
 			
-				
-				a.add(read1.nextInt());
-			
-			   ArrayList<Integer> b= new ArrayList<Integer>(a);
-			   
-   
-				Collections.sort(b);
-			
-				 
-   Object[]c= b.toArray();
-				
-				  List<Object> aL = Arrays.asList(c);
-			
-						  
-
-// Print the ArrayList 
-System.out.println("ArrayList: " + aL); 
+	// Print the ArrayList 
+	System.out.println("ArrayList: " + aL); 
 
 // convert the ArrayList to LinkedList 
 List<Object> 
 lL = convertALtoLL(aL); 
-
-
 long end= System.nanoTime();
-
 long startmin=System.nanoTime();
 min(c);
 long endmin=System.nanoTime();
-
 long startmax=System.nanoTime();
 max(c);
 long endmax=System.nanoTime();
-
 long startmedian=System.nanoTime();
 median(c);
 long endmedian=System.nanoTime();
-
-
 System.out.println(time_insert(end, start));
 System.out.println(time_min(endmin, startmin));
 System.out.println(time_max(endmax, startmax));
 System.out.println(time_median(endmedian, startmedian));
-
-
 // Print the LinkedList 
 System.out.println("LinkedList: " + lL); 
-				
-			
-			
 }
-
-
-
 read1.close();
-
-
 }
-		}	
-
-	}
-
+}	
+}
 public static <T> List<T> convertALtoLL(List<T> aL) 
 { 
 
@@ -161,30 +102,15 @@ public static <T> List<T> convertALtoLL(List<T> aL)
     // Return the converted LinkedList 
     return lL; 
 } 
-
-	
-	
-	
-
-
-
 public static int min(Object[]c) {
 	int min= (int) c[0];
-	
-		
-	
 	for(int i=1;i<c.length ;i++) {
-		if ((int) c[i]<min) {
+	if ((int) c[i]<min) {
+					
 			min=(int)c[i];
-			
-			
-		}
-		
-	}
-	 
-	
-	
-	return min;
+}
+}
+	 return min;
 }
 public static int max(Object[]c) {
 	int max= (int)  c[0];
@@ -193,10 +119,9 @@ public static int max(Object[]c) {
 			max=(int)c[i];
 			
 			
-		}
-	}
-	
-return max;
+}
+}
+	return max;
 }
 public static int median(Object[]c) {
 	int midnum=0;
@@ -214,37 +139,26 @@ public static int median(Object[]c) {
 			}
 	    if (c.length%2==1) {
 	    	 total=(int)c[(c.length-1)/2];
-	    	
-	    	
-	    
-		}
-		
-	}
-	
-	return total;
 }
-
-
+}
+return total;
+}
 public static long time_insert(long end,long start) {
 	
 	long elapsed= end-start/1000000;
 	return elapsed;
-	
 }
 public static long time_min(long endmin,long startmin) {
 	long elapsedmin= endmin-startmin/1000000;
 	return elapsedmin;
-	
 }
 public static long time_max(long endmax, long startmax) {
 	long elapsedmax= endmax-startmax/1000000;
 	return elapsedmax;
-
 }
  static long time_median(long endmedian, long startmedian) {
 	long elapsedmedian= endmedian-startmedian/1000000;
 	return elapsedmedian;
 }
-
 }
 
